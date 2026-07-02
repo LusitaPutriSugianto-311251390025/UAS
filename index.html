@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Lusita Putri Sugianto</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap');
+
+        :root {
+            --baby-blue: #8fd9fb;
+            --light-blue-bg: #f0faff;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f8fa;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(143, 217, 251, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-baby-blue {
+            background-color: var(--baby-blue);
+            color: var(--text-dark);
+        }
+
+        .bg-light-blue {
+            background-color: var(--light-blue-bg);
+            color: var(--text-dark);
+        }
+
+        /* Hero Section (Full width) */
+        .hero {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 30px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: -2px;
+            color: var(--text-dark);
+            text-transform: lowercase;
+            opacity: 0.9;
+        }
+
+        .hero h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            margin: -25px 0 20px 0;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Profile & Experience */
+        .profile-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-list li {
+            background: rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid var(--text-dark);
+        }
+
+        .experience-list h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+        
+        .experience-list span {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill-badge {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Certificates */
+        .certificates {
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+
+        .cert-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            width: 45%;
+            min-width: 300px;
+            transition: transform 0.2s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+            display: block;
+        }
+
+        .cert-card p {
+            margin: 12px 0 5px 0;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Footer */
+        .contact {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .contact h3 {
+            font-size: 2.5rem;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .cert-card {
+                width: 100%;
+            }
+            .contact {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="card bg-baby-blue hero">
+            <h1>portofolio</h1>
+            <h2>Lusita Putri Sugianto</h2>
+            <p style="font-weight: 600; color: var(--text-muted);">Mahasiswi | Bendahara | Penari</p>
+        </div>
+
+        <div class="card bg-light-blue">
+            <h3 class="section-title">Tentang Saya & Keahlian</h3>
+            <div class="profile-content">
+                <p>Halo! Saya Lusita Putri Sugianto. Saya memiliki ketertarikan besar dalam manajemen keuangan dan seni budaya. Pengalaman saya sebagai bendahara telah melatih ketelitian, transparansi, dan tanggung jawab saya dalam mengelola alokasi dana organisasi.</p>
+                
+                <h4 style="margin-top: 10px; margin-bottom: 0; text-align: center;">Keahlian Utama:</h4>
+                <div class="skills-container">
+                    <div class="skill-badge">🩰 Menari</div>
+                    <div class="skill-badge">💰 Manajemen Keuangan</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-baby-blue">
+            <h3 class="section-title">Pengalaman Kerja & Organisasi</h3>
+            <ul class="experience-list">
+                <li>
+                    <span>2025 - Sekarang</span>
+                    <h4>Grand Melia</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-muted);">Bekerja aktif dan berkontribusi secara profesional di industri hospitality.</p>
+                </li>
+                <li>
+                    <span>Sekarang</span>
+                    <h4>BEM Fakultas Manajemen dan Bisnis (FMB)</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-muted);">Universitas Mitra Bangsa</p>
+                </li>
+                <li>
+                    <span>2023 - 2024</span>
+                    <h4>Bendahara OSIS (Masa SMK)</h4>
+                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-muted);">Bertanggung jawab penuh atas sirkulasi kas, penyusunan anggaran, dan laporan keuangan kegiatan kesiswaan.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card bg-light-blue certificates">
+            <h3 class="section-title">Sertifikat & Pencapaian</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Bukti keikutsertaan aktif dalam pelestarian seni tari dan peningkatan literasi keuangan.</p>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img src="sertif-1.jpeg" alt="Sertifikat Tari Lenggang Nyai">
+                    <p>Peserta Kategori Tari "Lenggang Nyai"</p>
+                </div>
+
+                <div class="cert-card">
+                    <img src="sertif-2.jpeg" alt="Sertifikat Company Visit IDX">
+                    <p>Company Visit Bursa Efek Indonesia</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-baby-blue contact">
+            <h3>Let's work<br>together!</h3>
+            <div class="contact-info">
+                <p>📍 Jl. Aria Putra No. 102, ciputat, pamulang, tangerang selatan, banten, 15431</p>
+                <p>📧 loliylesya@gmail.com</p>
+                <p>📱 +62 877-7750-8813</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
